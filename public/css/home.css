@@ -86,8 +86,10 @@ header button.menu {
 }
 
 .articulo_main {
-    width: 90%;
-    margin: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 200px;
     box-shadow: 0px 0px 10px rgb(100 100 100);
     padding-bottom: 30px;
     border-radius: 5px;
@@ -151,8 +153,8 @@ article div.icono_main {
     color: black;
 }
 
-.icono_truck {
-    /* margin-left: 50px; */
+/* .icono_truck {
+    margin-left: 50px;
     position: relative;
     border: 1px solid var(--colorVerde);
     padding: 15px 5px;
@@ -160,7 +162,7 @@ article div.icono_main {
     left: 260px;
     bottom: 20px;
 
-}
+} */
 
 .descuentos {
     font-size: 16px;
@@ -223,6 +225,9 @@ h3.subtitulo_footer {
     .subtitulo {
         display: none;
     }
+    .articulo_main{
+        width: 80%;
+    }
 }
 
 /* tablet */
@@ -245,10 +250,17 @@ h3.subtitulo_footer {
     }
 
     .descripcion_main {
+            
         font-size: 16px;
         color: var(--colorGrisOscuro);
         padding-top: 25px;
     }
+    .visitas{
+        display: flex;
+        gap: 40px;
+        
+    }
+
 }
 
 /* desktop */

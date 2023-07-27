@@ -2,43 +2,43 @@
 
 .container_logo {
     display: flex;
-    align-items: center;
-}
-.container_logo_secundario {
-    display: flex;
+    gap: 20px ;
     align-items: center;
 }
 
 .logo {
-    width: 50%;
+    width: 200px;
+    height: 100px;
     padding: 15px;
 }
 
 .input_header {
     padding: 11px 9px;
+    margin: auto;
     width: 90%;
     border: none;
     border-radius: 5px;
 }
 
 .barraDeBusqueda {
-    display: flex;
-    width: 50%;
     position: relative;
+    width: 50%;
+    display: flex;
+}
+
+.container_icono{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
 }
 
 .icono_buscar {
-    position: absolute;
-    left: 73%;
     font-size: 15px;
-    top: 6px;
     color: var(--colorGrisOscuro);
     background-color: white;
     padding: 5px;
     border-radius: 5px;
 }
-
-.contenedor_banner {}
 
 header button.menu {
     background: var(--colorCeleste);
@@ -55,7 +55,7 @@ header button.menu {
 .subtitulo_main {
     color: var(--colorGrisOscuro);
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 .form_menu {
@@ -71,37 +71,11 @@ header button.menu {
     justify-content: center;
     align-items: center;
 }
-.subtitulo_secundario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icono_subititulo {}
 
 .header_h3 {
     color: var(--colorGrisOscuro);
     margin: 10px 10px;
     font-size: 14px;
-}
-
-.articulo_main {
-    width: 90%;
-    margin: 20px;
-    box-shadow: 0px 0px 10px rgb(100 100 100);
-    padding-bottom: 30px;
-    border-radius: 5px;
-}
-
-.imagenes {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.container_nav{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
 }
 
 .header_nav {
@@ -116,34 +90,36 @@ header nav ul li a {
     text-decoration: none;
     color: var(--colorGrisOscuro);
 }
-header nav ul li{
+
+header nav ul li {
     display: inline-block;
     padding: 5px;
     font-size: 14px;
 }
 
-
-
 /* main */
 
+.articulo_main {
+    width: 300px;
+    height: 420px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    border-radius: 5px;
+    position: relative;
+}
 
+.imagenes {
+    width: 100%;
+    border-radius: 5px;
+    /* object-fit: cover; */
+}
 
 .contenedor_main-descripcion {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-left: 20px;
-}
-
-.descripcion_main {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--colorGrisOscuro);
-    padding: 20px 0px 0px 20px;
-}
-
-article div.icono_main {
-    color: var(--colorVerde);
+    padding: 30px 0px 10px 20px;
 }
 
 .precios {
@@ -151,29 +127,34 @@ article div.icono_main {
     color: black;
 }
 
+.descuentos {
+    font-size: 16px;
+}
+
+.descripcion_main {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--colorGrisOscuro);
+    padding: 0px 0px 0px 20px;
+}
+
+.icono_main {
+    position: absolute;
+    color: var(--colorVerde);
+    right: 25px;
+    bottom: 100px;
+}
+
 .icono_truck {
-    /* margin-left: 50px; */
-    position: relative;
     border: 1px solid var(--colorVerde);
     padding: 15px 5px;
     border-radius: 50%;
     left: 260px;
     bottom: 20px;
-
-}
-
-.descuentos {
-    font-size: 16px;
-}
-
-main article.imagenes {
-    display: block;
-    text-align: center;
 }
 
 
 /* footer */
-
 
 .contenedor_footer {
     margin: 10px;
@@ -212,12 +193,8 @@ h3.subtitulo_footer {
         display: none;
     }
 
-    .container_header {
-        display: none;
-    }
-
     .container_logo {
-        display: none;
+        display: flex;
     }
 
     .subtitulo {
@@ -228,26 +205,34 @@ h3.subtitulo_footer {
 /* tablet */
 
 @media (min-width: 768px) {
-    .container_header_secundario {
+    .header_h3{
         display: flex;
     }
-
     header nav.header_nav ul {
         display: block;
     }
-    .container_nav{
+
+    .container_nav {
         display: flex;
-        justify-content: space-around;
+        margin: 0px 30px 0px 30px;
+        justify-content: space-between;
     }
 
     .menu {
         display: none;
     }
 
-    .descripcion_main {
-        font-size: 16px;
-        color: var(--colorGrisOscuro);
-        padding-top: 25px;
+    .visitas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
@@ -260,6 +245,10 @@ h3.subtitulo_footer {
 
     .menu {
         display: none;
+    }
+    .articulo_main {
+        width: 280px;
+        height: 400px;
     }
 
     .descripcion_main {

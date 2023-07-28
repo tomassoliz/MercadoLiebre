@@ -20,6 +20,7 @@
     border-radius: 5px;
     margin-bottom: 16px;
     border: 1px solid #d0dae1 ;
+    outline: none;
 }
 .container_section-form .input_button{
     width: 100%;
@@ -51,18 +52,6 @@
 }
 
 @media (min-width: 768px) {
-    .container_header_secundario {
-        display: flex;
-    }
-
-    header nav.header_nav ul {
-        display: block;
-    }
-    /* .container_nav{
-        display: flex;
-        justify-content: space-around;
-    } */
-
     .menu {
         display: none;
     }
@@ -70,10 +59,10 @@
     .descripcion_main {
         font-size: 16px;
         color: var(--colorGrisOscuro);
-        /* padding-top: 25px; */
     }
     .container_section-form{
         width: 60%;
+        margin-bottom: 100px;
     }
     .container_section-form  p{
         width: 100%;

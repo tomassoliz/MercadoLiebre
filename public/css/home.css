@@ -1,4 +1,4 @@
-/* header */
+/* HEADER */
 
 .container_logo {
     display: flex;
@@ -20,8 +20,9 @@
     border-radius: 5px;
     outline: none;
 }
-.icono_login{
-    margin-left: 5px ;
+
+.icono_login {
+    margin-left: 5px;
     color: var(--colorCeleste);
 }
 
@@ -46,11 +47,11 @@
     border-radius: 5px;
 }
 
-.menu{
+.menu {
     text-align: center;
 }
 
-.container_boton{
+.container_boton {
     background: var(--colorCeleste);
     color: white;
     border: none;
@@ -94,7 +95,7 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     color: var(--colorGrisOscuro);
     font-size: 16px;
@@ -106,14 +107,14 @@ header nav ul li {
     font-size: 14px;
 }
 
-/* main */
+/* MAIN */
 
 .articulo_main {
     width: 300px;
     height: 420px;
     margin: auto;
     margin-bottom: 30px;
-    box-shadow: 0px 0px 10px rgb(100 100 100);
+    box-shadow: 0px 0px 2px rgb(100 100 100);
     border-radius: 5px;
     position: relative;
 }
@@ -128,7 +129,7 @@ header nav ul li {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 30px 0px 10px 20px;
+    padding: 30px 0px 5px 20px;
 }
 
 .precios {
@@ -156,14 +157,14 @@ header nav ul li {
 
 .icono_truck {
     border: 1px solid var(--colorVerde);
-    padding: 15px 5px;
+    padding: 18px 6px;
     border-radius: 50%;
     left: 260px;
     bottom: 20px;
 }
 
 
-/* footer */
+/* FOOTER */
 
 .contenedor_footer {
     margin: 0px 5px;
@@ -187,7 +188,7 @@ h3.subtitulo_footer {
     text-align: center;
 }
 
-.icono_footer{
+.icono_footer {
     color: var(--colorCeleste);
     font: 14px;
 }
@@ -199,14 +200,17 @@ h3.subtitulo_footer {
     margin-top: 20px;
     padding: 5px;
 }
-.copy{
+
+.copy {
     color: var(--colorCeleste);
 }
 
-/* media querys */
+/* MEDIA QUERYS */
 
-/* mobile */
+/* MOBILE */
 @media (min-width: 375px) {
+    /* HEADER */
+
     header nav.header_nav ul {
         display: none;
     }
@@ -230,11 +234,20 @@ h3.subtitulo_footer {
     .subtitulo {
         display: none;
     }
+
+    /* MAIN */
+
+    .descripcion_main {
+        display: none;
+    }
 }
 
-/* tablet */
+/* TABLET */
 
 @media (min-width: 768px) {
+
+    /* HEADER */
+
     .header_h3 {
         display: flex;
     }
@@ -254,6 +267,8 @@ h3.subtitulo_footer {
         display: none;
     }
 
+    /* MAIN */
+
     .visitas {
         display: flex;
         flex-direction: row;
@@ -267,16 +282,52 @@ h3.subtitulo_footer {
         flex-wrap: wrap;
         justify-content: space-between;
     }
+
+    .icono_truck:hover {
+        animation: rotate 2s ease;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .articulo_main:hover {
+        box-shadow: 0px 0px 15px rgb(100 100 100);
+    }
+
+    .descripcion_main {
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .articulo_main:hover .descripcion_main {
+        height: 20px;
+    }
 }
 
-/* desktop */
+/* DESKTOP */
 
 @media (min-width: 1024px) {
+
+    /* HEADER */
     .container_logo {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
+
     .logo {
         width: 250px;
         height: 150px;
@@ -295,19 +346,57 @@ h3.subtitulo_footer {
         display: flex;
         width: 300px;
     }
+
     .banner {
         height: 250px;
     }
+
+    /* MAIN */
 
     .articulo_main {
         width: 280px;
         height: 400px;
     }
 
+    .icono_truck:hover {
+        animation: rotate 2s ease;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
     .descripcion_main {
-        font-size: 16px;
-        color: var(--colorGrisOscuro);
-        padding-top: 25px;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .articulo_main:hover .descripcion_main {
+        height: 40px;
+    }
+
+    /* FOOTER */
+
+    .contenedor_footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .articulo_footer {
+        width: 30%;
     }
 
 }

@@ -192,11 +192,14 @@ h3.subtitulo_footer {
     color: var(--colorCeleste);
     font: 14px;
 }
+.contenedor_footer-copy{
+    padding-bottom: 20px;
+    text-align: center;
+}
 
 .copyright {
     color: var(--colorGrisOscuro);
     font-size: 12px;
-    text-align: center;
     margin-top: 20px;
     padding: 5px;
 }
